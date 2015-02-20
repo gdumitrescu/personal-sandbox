@@ -3,7 +3,7 @@
  *
  * http://personal.getsandbox.com
  */
-var skills = require("./routes/skills.js")
+var skills = require("./routes/skills.js");
 
 /* Route definition styles:
  *
