@@ -4,12 +4,26 @@
  * Parameters (named path params accessible on req.params and query params on req.query):
  *
  */
-exports.getSkills = function(req, res) {
-	res.set("Content-Type", "application/json");
-	res.status(200);
-
-	// set response body and send
-	res.render('skills_getSkills');
+exports.getSkills = function(req, res){
+    // Check the request, make sure it is a compatible type
+    if (!req.is('application/json')) {
+        return res.send(400, 'Invalid content type, expected application/json');
+    }
+    
+    // Set the type of response, sets the Content-Type header.
+    res.type('application/json');
+    
+    // Set the status code of the response.
+    res.status(200);
+    
+    // Send the response body.
+    res.json(
+        [
+            { "id": 1, "name": "HTML" },
+            { "id": 2, "name": "CSS"},
+            { "id": 3, "name": "JavaScript" }
+        ]
+    );
 };
 
 /*
