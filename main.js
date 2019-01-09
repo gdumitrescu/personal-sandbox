@@ -14,7 +14,7 @@ var skills = require("./routes/skills.js");
 Sandbox.define('/v1/skills', 'GET', skills.getSkills);
 Sandbox.define('/v1/skills', 'POST', skills.postSkills);
 Sandbox.define("/skills/{id}", "GET", skills.getSkillsById);
-Sandbox.define("/skills/{id}", "PUT", skills.putSkills);
+Sandbox.define('/v1/skills/{id}', 'PUT', skills.putSkills);
 Sandbox.define("/skills/{id}", "DELETE", skills.deleteSkills);
 
 
