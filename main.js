@@ -11,7 +11,7 @@ var skills = require("./routes/skills.js");
  *	soap(path, soapAction, function)
  *
  */
-Sandbox.define("/skills", "GET", skills.getSkills);
+Sandbox.define('/v1/skills', 'GET', skills.getSkills);
 Sandbox.define('/v1/skills', 'POST', skills.postSkills);
 Sandbox.define("/skills/{id}", "GET", skills.getSkillsById);
 Sandbox.define("/skills/{id}", "PUT", skills.putSkills);
