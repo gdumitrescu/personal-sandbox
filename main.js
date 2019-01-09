@@ -112,7 +112,7 @@ Sandbox.define('/tools','GET', function(req, res) {
     });
 })
 
-Sandbox.define('/traits','GET', function(req, res){
+Sandbox.define('/v1/traits', 'GET', function(req, res){
     // Check the request, make sure it is a compatible type
     if (!req.is('application/json')) {
         return res.send(400, 'Invalid content type, expected application/json');
